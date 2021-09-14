@@ -1,0 +1,37 @@
+#loading_content {
+position: absolute;
+background: #3C8DBC;
+opacity: 0.9;
+z-index: 100;
+left: 0;
+right: 0;
+height: 100%;
+text-align: center;
+color: #FFFFFF;
+}
+
+.btn {
+  background-color:#3C8DBC;  
+  color: #FFFFFF;
+  font-family: Courier New;
+  width:80%;
+  /*text-align: center;*/
+  text-align: left;
+  font-size: 100%;
+}
+
+.btn:hover {
+  background-color: #3C8DBC; 
+  width:85%;
+  font-size: 100%;
+  color: #FFFFFF;
+}
+
+.btn:focus {
+  background-color: #397EA8;
+  color: #FFFFFF;
+}
+
+.test_para {
+  font-weight: bold;
+}
