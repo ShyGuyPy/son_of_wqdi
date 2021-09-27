@@ -42,7 +42,7 @@ ui <- fluidPage(useShinyjs(),
                       #tabItem(tabName = "tabular_tab",
                               fluidPage(fluidRow(
                                 column(
-                                  width = 4,
+                                  width = 12,
                                   tabBox(width = 12,
                                          tabPanel("Filter", icon = icon("filter"),
                                                   source("ui/ui_filter.R", local = TRUE)$value),
@@ -61,9 +61,11 @@ ui <- fluidPage(useShinyjs(),
                                   #     status = "primary",
                                   #     source("ui/ui_download_box.R", local = TRUE)$value
                                   #     ),
-                                  valueBoxOutput("program_count", width = 12)
+                                  
+                                  #outputs the number of programs as count:
+                                  # valueBoxOutput("program_count", width = 12)
                                 ),
-                                column(width = 8,
+                                column(width = 12,
                                        tabBox(
                                          width = 12,
                                          height = 700,
