@@ -1,17 +1,29 @@
 fluidRow(style = "font-size:75%",
   # column(width = 4, p("Primary Filter")),
+  
+  # box(width =4,
+      # column(width = 1.5, p("Primary Filter")),
   column(width = 2, uiOutput("filter_col_1")),
+
   column(width = 2, uiOutput("filter_select_1")),
-  br(),
+  # ),#end box
+  
+  # br(),
   # conditionalPanel(condition = 'input.filter_col_1 != "none"',
                    # column(width = 4, p("Secondary Filter")),
+  # box(width =4,
                    column(width = 2, uiOutput("filter_col_2")),
                    column(width = 2, uiOutput("filter_select_2")),#),
-  br(),
+  # ),#end box
+  
+  # br(),
   # conditionalPanel(condition = 'input.filter_col_2 != "none"',
                    # column(width = 4, p("Tertiary Filter")),
+  # box(width =4,
                    column(width = 2, uiOutput("filter_col_3")),
                    column(width = 2, uiOutput("filter_select_3")),
+  # ),#end box
+  
   # ),
   # column(width = 12,
   #        uiOutput("filter.message")),

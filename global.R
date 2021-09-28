@@ -59,7 +59,24 @@ program.cols <- c("organization", "program_name", "site_location",
                   "public_or_restricted_data", "dataset_fees",
                   "data_type", "program_website", "data_link",
                   "contact_name", "contact_phone", "contact_email")
-program.df <- inventory.df[, names(inventory.df) %in% program.cols]
+program.df <- inventory.df[, names(inventory.df) %in% program.cols] %>%
+  ####reordering table output
+  select("program_name", "site_location", "metric_parameter","parameter_group",  
+         
+         #"organization", 
+         "data_link", "program_website",
+         
+         "purpose", "collection_method", "spatial_coverage", 
+         
+         "period_of_record_start_date", "period_of_record_end_date", 
+         
+         "fall_line", "lat_long", "frequency_sampled", 
+         
+         "data_type", "public_or_restricted_data", 
+         
+         "dataset_fees")
+
+
 
 site.cols <- c("organization", "program name", "station_id", "lat", "long")
 site.df <- inventory.df[, names(inventory.df) %in% site.cols]
