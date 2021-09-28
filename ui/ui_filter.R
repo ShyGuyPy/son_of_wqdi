@@ -1,4 +1,4 @@
-fluidRow(style = "font-size:75%",
+fluidRow(style = "font-size:60%",
   # column(width = 4, p("Primary Filter")),
   
   # box(width =4,

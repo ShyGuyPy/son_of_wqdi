@@ -4,7 +4,11 @@ dt_output <- function(id) {
   ns <- NS(id)
   
   tagList(
+    div(#embedded in a div so that font can be modified
       DT::dataTableOutput(ns("dt_table"))
+      # added to reduce data table font size so more information could be displayed
+      ,style = "font-size:60%; font-weight: bold;"
+    )#end div
   )
   
 }

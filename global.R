@@ -61,10 +61,10 @@ program.cols <- c("organization", "program_name", "site_location",
                   "contact_name", "contact_phone", "contact_email")
 program.df <- inventory.df[, names(inventory.df) %in% program.cols] %>%
   ####reordering table output
-  select("program_name", "site_location", "metric_parameter","parameter_group",  
+  select("program_name", "site_location", "metric_parameter",  
          
          #"organization", 
-         "data_link", "program_website",
+         "data_link", "parameter_group", "program_website",
          
          "purpose", "collection_method", "spatial_coverage", 
          
