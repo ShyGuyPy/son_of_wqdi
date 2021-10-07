@@ -1,5 +1,22 @@
 # UI---------------------------------------------------------------------------
-ui <- fluidPage(useShinyjs(),
+ui <- fluidPage(
+  
+  # tags$head(
+  #   tags$style(HTML("
+  # 
+  #     .selectize-input {
+  #       height: 50px;
+  #       width: 50px;
+  #       font-size: 24pt;
+  #       padding-top: 5px;
+  #     }
+  # 
+  #   "))
+  # ),
+  
+  useShinyjs(),
+  
+  
                 includeCSS("www/styles.css"),
                 source("ui/ui_loading.R", local = TRUE)$value,
                 hidden(div(

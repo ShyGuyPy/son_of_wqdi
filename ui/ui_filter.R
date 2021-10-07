@@ -1,28 +1,36 @@
 fluidRow(style = "font-size:60%",
-  # column(width = 4, p("Primary Filter")),
-  
+  # box(width = 12, 
+  #heading 1
+  # column(width = 1.5, p("Primary Filter")),
   # box(width =4,
-      # column(width = 1.5, p("Primary Filter")),
+      # column(width = 3 , p("Primary Filter"),style='text-align:center; border:3px solid #3c8dbc;'),
   column(width = 2, uiOutput("filter_col_1")),
 
-  column(width = 2, uiOutput("filter_select_1")),
+  column(width = 2, uiOutput("filter_select_1"),style='margin-bottom:30px;border-right:5px solid #3c8dbc;'), ##padding: 5px;'),#),
   # ),#end box
   
   # br(),
   # conditionalPanel(condition = 'input.filter_col_1 != "none"',
-                   # column(width = 4, p("Secondary Filter")),
+  
+  #heading 2
+  # column(width = 4, p("Secondary Filter")),                 
   # box(width =4,
+      # column(width = 3, p("Secondary Filter"),style='text-align:center; border:3px solid #3c8dbc;'),
                    column(width = 2, uiOutput("filter_col_2")),
-                   column(width = 2, uiOutput("filter_select_2")),#),
+                   column(width = 2, uiOutput("filter_select_2"),style='margin-bottom:30px;border-right:5px solid #3c8dbc;'), ##padding: 5px;'),#),
   # ),#end box
   
   # br(),
   # conditionalPanel(condition = 'input.filter_col_2 != "none"',
-                   # column(width = 4, p("Tertiary Filter")),
+  
+  #heading 3
   # box(width =4,
+  # column(width = 4, p("Tertiary Filter"),style='text-align:center; border:3px solid #3c8dbc;'),
                    column(width = 2, uiOutput("filter_col_3")),
                    column(width = 2, uiOutput("filter_select_3")),
   # ),#end box
+  
+  # ), #end box12
   
   # ),
   # column(width = 12,
