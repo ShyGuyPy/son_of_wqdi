@@ -38,10 +38,16 @@ color: #FFFFFF;
 
 .selectize-input {
   height: 25px;
-  width: 85px;
-  font-size: 10pt;
+  width: 125px;
+  font-size: 7pt;
   font-weight: normal;
   border: 3px solid #3c8dbc;
+  /*border-radius: 15px;*/
+  
+  align-content:center;
+  
+  padding-bottom: 0;
+  margin-bottom: 0;
   /*display:block;*/
   /*position:relative;
   right: 30px; */
@@ -56,12 +62,20 @@ color: #FFFFFF;
   
   
 }
+.selectize-control {
+  border-radius: 15px;
+}
 
 .box-body {
-  height: 90px;
-  padding-right: 20px;
-  padding-left: 20px;
+  height: 75px;
+  /*padding-right: 20px;
+  padding-left: 20px;*/
   border: 3px solid #3c8dbc;
+  border-radius: 25px;
+  
+  padding-bottom: 0;
+  margin-bottom: 0;
+  align-content:center;
   /*position:relative;
   left: 30px;*/
   
@@ -74,5 +88,49 @@ color: #FFFFFF;
   */
 }
 
+/*box around input selections (3 of them)*/
+.col-sm-4 {
+  /*rounding edges*/
+  border-radius: 5px;
+  /*padding-right: 0;
+  padding-left: 0;*/
+}
+
+/*
+.filter_col_1 {
+  width: 80%;
+}
+
+.filter_select_1 {
+  width: 80%;
+}
+
+.filter_col_2 {
+  width: 80%;
+}
+
+.filter_select_2 {
+  width: 80%;
+}
+
+.filter_col_3 {
+  width: 80%;
+}
+
+.filter_select_3 {
+  width: 80%;
+}
+*/
 
 
+p {
+  font-size:15px; font-weight: bold;
+}
+.control-label {
+  font-size: 10px;
+}
+
+/*.tab-content {
+  padding:0;
+}
+*/
