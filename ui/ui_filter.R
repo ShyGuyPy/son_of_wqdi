@@ -14,11 +14,12 @@ fluidRow(style = "font-size:60%",
       ),#end column
   
   # br(),
-  # conditionalPanel(condition = 'input.filter_col_1 != "none"',
   
   #heading 2
   # column(width = 4, p("Secondary Filter")),                 
   # box(width =4,
+  
+  conditionalPanel(condition = 'input.filter_col_1 != "none"',
       column(width = 4, p("Secondary Filter"),style='text-align:center; border:5px solid #3c8dbc;',#),
                    #column(width = 2, 
              uiOutput("filter_col_2"),
@@ -27,9 +28,10 @@ fluidRow(style = "font-size:60%",
              uiOutput("filter_select_2"),#,style='margin-bottom:30px;border-right:5px solid #3c8dbc;'), ##padding: 5px;'),#),
   # ),#end box
       ),#end column
+  ),#end conditional panel
   
   # br(),
-  # conditionalPanel(condition = 'input.filter_col_2 != "none"',
+  conditionalPanel(condition = 'input.filter_col_2 != "none"',
   
   #heading 3
   # box(width =4,
@@ -41,7 +43,7 @@ fluidRow(style = "font-size:60%",
          uiOutput("filter_select_3"),#),
   # ),#end box
   ),#end column
-  
+  ),#end conditional panel
   # ), #end box12
   
   # ),

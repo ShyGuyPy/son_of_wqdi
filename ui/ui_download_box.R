@@ -1,11 +1,14 @@
 fluidRow(
-  column(width = 12, h3("Filtered Data")),
-  column(width = 12,
+  # column(width = 4, h3("Filtered Data")),
+  # column(width = 4,sidebarMenu(
+  menuItem(text = "Filtered Data"),
+  # sidebarMenuOutput("filter_col_1"),
+  
          downloadButton('download.program.rec',
                         'Download Program Data',
                         class = "button",
                         style = "width:100%;")
-  )
+  # )
   # column(width = 12,
   #     downloadButton('download.site.rec',
                         #                   'Download Site Data',
