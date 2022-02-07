@@ -33,9 +33,9 @@ ui <- fluidPage(
                     # sidebarPanel(
                     tabsetPanel(#title = "stuff",
                       tabPanel(title = "Filter", icon = icon("filter"),
-                              source("ui/ui_filter_vertical.R", local = TRUE)$value
+                              source("ui/ui_filter_vertical2.R", local = TRUE)$value
                               ),
-                      tabPanel(title =  "Download", icon = icon("download"),
+                      tabPanel(title =  "Download", icon = icon("download"), 
                               source("ui/ui_download_box.R", local = TRUE)$value
                               )#,
 

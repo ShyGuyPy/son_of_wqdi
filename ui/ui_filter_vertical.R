@@ -26,23 +26,30 @@
 #            ),#end conditional panel
 #          )
 # )
-
-sidebarMenu(
+# conditionalPanel(condition = '1 == 1',
+sidebarMenu(id = 'f1',
     menuItem(text = "Primary Filter"),
     sidebarMenuOutput("filter_col_1"),
-    sidebarMenuOutput("filter_select_1"),
-    
-    conditionalPanel(condition = 'input.filter_col_1" != "none"',#'input.filter_col_1" != "none"',
-    # sidebarMenu(
-                     menuItem(text = "Secondary Filter"),
-    sidebarMenuOutput("filter_col_2"),
-    sidebarMenuOutput("filter_select_2")
-    # ),
-    ),#end conditional panel
-    
-    conditionalPanel(condition = 'input.filter_col_2 != "none"',
-    menuItem(text = "Tertiary Filter"),
-    sidebarMenuOutput("filter_col_3"),
-    sidebarMenuOutput("filter_select_3")
-    )#end conditional panel
-  )
+    sidebarMenuOutput("filter_select_1")
+)
+# ) #end conditional panel
+
+
+
+
+    # conditionalPanel(condition = 'input.filter_col_1" != "none"',#'input.filter_col_1" != "none"',
+# sidebarMenu(id = 'f2',
+#     menuItem(text = "Secondary Filter")#,
+    # sidebarMenuOutput("filter_col_2"),
+    # sidebarMenuOutput("filter_select_2")
+# )
+    # )#end conditional panel
+
+    # conditionalPanel(condition = 'input.filter_col_2 != "none"',
+# sidebarMenu(
+#     menuItem(text = "Tertiary Filter"),
+#     sidebarMenuOutput("filter_col_3"),
+#     sidebarMenuOutput("filter_select_3")
+# )
+    # )#end conditional panel
+  #/ )
