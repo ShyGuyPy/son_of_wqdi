@@ -10,6 +10,12 @@ text-align: center;
 color: #FFFFFF;
 }
 
+.tabbable > .nav > li > a[data-value='Download'] {background-color: red;   color:white} 
+
+.program_dt-dt_table {
+  height: 95%;
+}
+
 .btn {
   background-color:#3C8DBC;  
   color: #FFFFFF;

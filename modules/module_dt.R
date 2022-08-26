@@ -1,3 +1,8 @@
+# Module adds text tooltip to column headers (Luke added 8/9/2022)
+dt_tooltip <- function(dataframe){
+  tooltip_test_df <- dataframe
+}
+
 # Module UI function
 dt_output <- function(id) {
   # Create a namespace function using the provided id
@@ -15,13 +20,17 @@ dt_output <- function(id) {
 
 # Module Server function
 dt_table <- function(input, output, session, data.df) {
+  
+  tooltip_test_df <- dt_tooltip(data.df)
+  
   output$dt_table <- DT::renderDataTable({
   validate(need(data.df(), "data.df not found"))
     validate(need(nrow(data.df()) > 0, "No data available for this filtering combination."))
     data.df <- data.df() %>% 
       rename_all(list(~stringr::str_replace_all(., "_", " "))) %>% 
       rename_all(stringr::str_to_title) 
-  DT::datatable(data.df,
+  DT::datatable(data.df, 
+                # container = sketch,
                 class = 'nowrap cell-border stripe',
                 escape = FALSE,
                 options = list(
