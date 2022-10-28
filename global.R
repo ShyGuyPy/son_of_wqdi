@@ -1,9 +1,16 @@
+# library(profvis)
+
 #print(pryr::mem_used())
 
-#Libraries-----------------------------------------------------------------------
+# Load packages ---------------------------------------------------------------  
+# Use this one when not publishing to shinyapp.io, comment out when publishing:
 source("global/load_packages.R", local = TRUE)
+# Use this one when publishing, can comment out otherwise:
+# source("global/import_packages.R", local = TRUE)
+
 #Modules-----------------------------------------------------------------------
 source("modules/module_dt.R")
+
 #Functions---------------------------------------------------------------------
 
 # Function enables the loading page feature of this app.

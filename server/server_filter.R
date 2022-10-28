@@ -8,13 +8,31 @@ clean_filter_labels <- function(x) {
   })
 }
 
-table.filter.cols <- c("none", "parameter_group", "metric_parameter",
-                       "organization", "program_name", "site_location",
-                       "purpose", "collection_method", "spatial_coverage",
-                       "period_of_record_start_date", "period_of_record_end_date",
-                       "fall_line", "lat_long", "frequency_sampled",
-                       "data_type", "public_or_restricted_data",
-                       "dataset_fees") %>% 
+#original
+# table.filter.cols <- c("none", "parameter_group", "metric_parameter",
+#                        "organization", "program_name", "site_location",
+#                        "purpose", "collection_method", "spatial_coverage",
+#                        "period_of_record_start_date", "period_of_record_end_date",
+#                        "fall_line", "lat_long", "frequency_sampled",
+#                        "data_type", "public_or_restricted_data",
+#                        "dataset_fees") %>%
+#   clean_filter_labels()
+
+#changed to match filter column head order (may break things)
+table.filter.cols <- c("program_name", "site_location", "metric_parameter",
+
+                                #"organization",
+                                "data_link", "parameter_group", "program_website",
+
+                                "purpose", "collection_method", "spatial_coverage",
+
+                                "period_of_record_start_date", "period_of_record_end_date",
+
+                                "fall_line", "lat_long", "frequency_sampled",
+
+                                "data_type", "public_or_restricted_data",
+
+                                "dataset_fees") %>%
   clean_filter_labels()
 #------------------------------------------------------------------------------
 output$filter_col_1 <- renderUI({
