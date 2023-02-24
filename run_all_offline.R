@@ -6,15 +6,15 @@
 # It also runs import_data.R and scripts in /global/data_processing
 # Thus, you can inspect most dataframes of interest
 
-library(profvis)###package for tracking run time of app components
-
-profvis({
-# print("run_all_offline is running")
-
-source("global.R", local = TRUE)
+# library(profvis)###package for tracking run time of app components
+# 
+# profvis({
+# # print("run_all_offline is running")
+# 
+# source("global.R", local = TRUE)
 # print("gloabl.R has run")
 
-})#end profvis
+# })#end profvis
 
 # profvis({ runApp('/Users/lvawter/Documents/R_scripts/wqdi_development') }
 #         , prof_output = '/Users/lvawter//Documents/R_scripts/wqdi_development')

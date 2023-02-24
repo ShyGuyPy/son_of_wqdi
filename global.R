@@ -1,6 +1,5 @@
 # print("global is running")
 
-# library(profvis)
 
 #print(pryr::mem_used())
 

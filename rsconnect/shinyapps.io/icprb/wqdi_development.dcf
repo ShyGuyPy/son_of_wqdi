@@ -5,9 +5,9 @@ account: icprb
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 6857299
-bundleId: 6821198
+bundleId: 6882958
 url: https://icprb.shinyapps.io/wqdi_development/
-when: 1675810933.15639
-lastSyncTime: 1675810933.15639
+when: 1677235780.18943
+lastSyncTime: 1677235780.18943
 asMultiple: FALSE
 asStatic: FALSE

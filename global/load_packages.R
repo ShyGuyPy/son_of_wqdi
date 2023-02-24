@@ -8,9 +8,9 @@ need <- c("shiny",
           "DT",
           "data.table",
           "dplyr",
-          "shinyjs")#,
-          # "htmltools",
-          # "shinycssloaders")
+          "shinyjs",
+          "htmltools",
+          "shinycssloaders")
 # find out which packages are installed
 ins <- installed.packages()[, 1]
 # check if the needed packages are installed
@@ -32,5 +32,5 @@ library("DT")
 library("data.table")
 library("dplyr")
 library("shinyjs")
-# library("htmltools")
-# library("shinycssloaders")
+library("htmltools")
+library("shinycssloaders")

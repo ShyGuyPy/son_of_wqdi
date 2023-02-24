@@ -37,7 +37,8 @@ clean_filter_labels <- function(x) {
 ###################column structure 1/24/2023
 
 #changed to match filter column head order (may break things)
-table.filter.cols <- c("parameter_group",
+table.filter.cols <- c("none",
+                       "parameter_group",
                        "metric_parameter",
                        "state",
                        "county",

@@ -1,6 +1,6 @@
 server <- function(input, output, session) {
   
-  options(rsconnect.max.bundle.size=xxxlarge)
+  # options(rsconnect.max.bundle.size=xxxlarge)
   options(shiny.maxRequestSize=8000*1024^2)
   
   # Loading Page (Server) ---------------------------------------------------
