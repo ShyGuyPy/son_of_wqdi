@@ -1,25 +1,25 @@
 # UI---------------------------------------------------------------------------
 ###testing###
-sketch = htmltools::withTags(table(
-  class = 'display',
-  thead(
-    tr(
-      th('', title = 'Row Names'),
-      th('Program Name', title = 'test output for program name'),
-      th('Site Location', title = 'The Site Location')#,
-      # th('Petal.Length', title = 'The Petal Length'),
-      # th('Petal.Width', title = 'The Petal Width'),
-      # th('Species', title = 'Iris Species')
-    )
-  )
-))
+# sketch = htmltools::withTags(table(
+#   class = 'display',
+#   thead(
+#     tr(
+#       th('', title = 'Row Names'),
+#       th('Program Name', title = 'test output for program name'),
+#       th('Site Location', title = 'The Site Location')#,
+#       # th('Petal.Length', title = 'The Petal Length'),
+#       # th('Petal.Width', title = 'The Petal Width'),
+#       # th('Species', title = 'Iris Species')
+#     )
+#   )
+# ))
 ###testing###
 
 ui <- fluidPage(
-  
+
   useShinyjs(),
-  
-  
+
+
   includeCSS("www/styles.css"),
   source("ui/ui_loading.R", local = TRUE)$value,
   hidden(div(
@@ -31,30 +31,30 @@ ui <- fluidPage(
         # width = 300,
         # sidebarMenu(
         # tabItems(
-        
-        
+
+
         # sidebarPanel(
         tabsetPanel(#title = "stuff",
           tabPanel(title = "Filter", icon = icon("filter"),
                    source("ui/ui_filter_vertical2.R", local = TRUE)$value
           ),
-          tabPanel(title =  "Download List", icon = icon("download"), 
+          tabPanel(title =  "Download List", icon = icon("download"),
                    source("ui/ui_download_box.R", local = TRUE)$value
           )#, # end tabPanel
-          
+
         )#, #end tabItems
         # ),
-        
+
         # )
-        
-        # sidebarMenu(id = "tab", 
+
+        # sidebarMenu(id = "tab",
         #             menuItem("1", tabName = "1"),
         #             menuItem("2", tabName = "2")
         # ),
-        
-        
+
+
       ), #end dashboardSidebar
-      
+
       # dashboardSidebar(width = 100,
       #                  sidebarMenu(
       #                    # menuItem(
@@ -88,6 +88,7 @@ ui <- fluidPage(
         #                  ))
         #         ))),
         #tabItem(tabName = "tabular_tab",
+        
         fluidPage(fluidRow(
           # column(
           #   width = 12,
@@ -98,7 +99,7 @@ ui <- fluidPage(
           #                   source("ui/ui_download_box.R", local = TRUE)$value)
           #   ),
           # ),
-          # 
+          #
           column(width = 12,
                  tabBox(
                    width = 12,
@@ -109,6 +110,7 @@ ui <- fluidPage(
                    #          dt_output("site_dt"))
                  ))
         ))
+        
         #)#end tabitem,
         #   tabItem(tabName = "map_tab",
         #           fluidPage(fluidRow(
@@ -124,12 +126,12 @@ ui <- fluidPage(
         #                                               width = "100%")
         #                    ))
         #           ))
-        # 
+        #
         # )
         #)#end tabitems
       )#end dashboardBody
     )#end dashboardPage
   )#end div
   )#end hidden
-)
+)#end fluidpage
 
