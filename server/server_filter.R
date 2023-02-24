@@ -8,7 +8,7 @@ clean_filter_labels <- function(x) {
   })
 }
 
-#original
+####################original column structure
 # table.filter.cols <- c("none", "parameter_group", "metric_parameter",
 #                        "organization", "program_name", "site_location",
 #                        "purpose", "collection_method", "spatial_coverage",
@@ -17,22 +17,42 @@ clean_filter_labels <- function(x) {
 #                        "data_type", "public_or_restricted_data",
 #                        "dataset_fees") %>%
 #   clean_filter_labels()
+####################original column structure
+
+###################cloumn structure 1/24/2023
+# "program_name", "site_location", "metric_parameter",
+# 
+#                               #"organization",
+#                               "data_link", "parameter_group", "program_website",
+# 
+#                               "purpose", "collection_method", "spatial_coverage",
+# 
+#                               "period_of_record_start_date", "period_of_record_end_date",
+# 
+#                               "fall_line", "lat_long", "frequency_sampled",
+# 
+#                               "data_type", "public_or_restricted_data",
+# 
+#                               "dataset_fees"
+###################column structure 1/24/2023
 
 #changed to match filter column head order (may break things)
-table.filter.cols <- c("program_name", "site_location", "metric_parameter",
-
-                                #"organization",
-                                "data_link", "parameter_group", "program_website",
-
-                                "purpose", "collection_method", "spatial_coverage",
-
-                                "period_of_record_start_date", "period_of_record_end_date",
-
-                                "fall_line", "lat_long", "frequency_sampled",
-
-                                "data_type", "public_or_restricted_data",
-
-                                "dataset_fees") %>%
+table.filter.cols <- c("parameter_group",
+                       "metric_parameter",
+                       "state",
+                       "county",
+                       "watershed_information",
+                       "program_name",
+                       "fall_line",
+                       "purpose",
+                       "collection_method",
+                       "frequency_sampled",
+                       "period_of_record_start_date", 
+                       "period_of_record_end_date",
+                       "number_of_sites_sampled",
+                       "data_link",
+                       "data_type",
+                       "program_website") %>%
   clean_filter_labels()
 #------------------------------------------------------------------------------
 output$filter_col_1 <- renderUI({

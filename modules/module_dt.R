@@ -1,7 +1,7 @@
 # Module adds text tooltip to column headers (Luke added 8/9/2022)
-dt_tooltip <- function(dataframe){
-  tooltip_test_df <- dataframe
-}
+# dt_tooltip <- function(dataframe){
+#   tooltip_test_df <- dataframe
+# }
 
 # Module UI function
 dt_output <- function(id) {
@@ -27,27 +27,32 @@ dt_table <- function(input, output, session, data.df) {
     thead(
       tr(
         th('', title = 'Row Names'),
+        th("Parameter Group", title = 'Related groups of metric parameters.'),
+        th("Metric Parameter", title = 'Related groups of metric parameters.'),
+        th("State", title = 'The state where data collection occurs'),
+        th("County", title = 'The county where data collection occurs'),
+        th("Watershed Information", title = 'Name and location information about the watershed'),
         th("Program Name", title = 'Name of program conducting the data collection effort.'),
-        th("Site Location", title = 'County(ies)/State(s) where data collection occurs.'),
-        th("metric_parameter", title = 'Related groups of metric parameters.'),  
-        th("data_link", title = 'Web link to download data.'),
-        th("parameter_group", title = 'Related groups of metric parameters.'),
-        th("program_website", title = 'Web link to the program’s website. '),
-        th("purpose", title = 'Program’s stated purpose for the data collection effort.'),
-        th("collection_method", title = 'Method used by program to collect data.'),
-        th("spatial_coverage", title = 'Spatial coverage.'),
-        th("period_of_record_start_date", title = 'Date data collection began.'),
-        th("period_of_record_end_date", title = 'Most recent date of data collection as of ICPRB’s most recent validation (summer 2022).'),
-        th("fall_line", title = 'Indicates where data collection occurs above, below, or both above and below the Fall Line.'),
-        th("lat_long", title = 'The latitiude and longitude coordinates of site of data collection.'),
-        th("frequency_sampled", title = 'How often data are collected.'),
-        th("data_type", title = 'Format of data available for download from the program’s website.'),
-        th("public_or_restricted_data", title = 'Is the data public or restricted access.'),
-        th("dataset_fees", title = 'fees')
-        
+        th("Fall Line", title = 'Indicates where data collection occurs above, below, or both above and below the Fall Line.'),
+        th("Purpose", title = 'Program’s stated purpose for the data collection effort.'),
+        th("Collection Method", title = 'Method used by program to collect data.'),
+        th("Frequency Sampled", title = 'How often data are collected.'),
+        th("Period Of Record Start Date", title = 'Date data collection began.'),
+        th("Period Of Record End Date", title = 'Most recent date of data collection as of ICPRB’s most recent validation (summer 2022).'),
+        th("Number Of Sites Sampled", title = 'Number of sites sampled as part of this program, this should be a number or an entry indicating no data or na.'),
+        th("Data Link", title = 'Web link to download data.'),
+        th("Data Type", title = 'Format of data available for download from the program’s website.'),
+        th("Program Website", title = 'Web link to the program’s website.')
       )
     )
-  ))
+  ))        
+        
+        # th("Site Location", title = 'county(ies)/state(s) where data collection occurs.'),
+        # th("spatial_coverage", title = 'Spatial coverage.'),
+        # th("lat_long", title = 'The latitiude and longitude coordinates of site of data collection.'),
+        # th("public_or_restricted_data", title = 'Is the data public or restricted access.'),
+        # th("dataset_fees", title = 'fees')
+
   
   output$dt_table <- DT::renderDataTable({
   validate(need(data.df(), "data.df not found"))
