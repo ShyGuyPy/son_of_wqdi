@@ -28,10 +28,10 @@ dt_table <- function(input, output, session, data.df) {
       tr(
         th('', title = 'Row Names'),
         th("Parameter Group", title = 'Related groups of metric parameters.'),
-        th("Metric Parameter", title = 'Related groups of metric parameters.'),
-        th("State", title = 'The state where data collection occurs'),
-        th("County", title = 'The county where data collection occurs'),
-        th("Watershed Information", title = 'Name and location information about the watershed'),
+        th("Metric Parameter", title = 'Name of parameter being sampled for by the program.'),
+        th("State", title = 'State(s) where data collection occurs.'),
+        th("County", title = 'County(ies) where data collection occurs.'),
+        th("Watershed Information", title = 'Watershed(s) where data collection occurs.'),
         th("Program Name", title = 'Name of program conducting the data collection effort.'),
         th("Fall Line", title = 'Indicates where data collection occurs above, below, or both above and below the Fall Line.'),
         th("Purpose", title = 'Program’s stated purpose for the data collection effort.'),
@@ -39,10 +39,12 @@ dt_table <- function(input, output, session, data.df) {
         th("Frequency Sampled", title = 'How often data are collected.'),
         th("Period Of Record Start Date", title = 'Date data collection began.'),
         th("Period Of Record End Date", title = 'Most recent date of data collection as of ICPRB’s most recent validation (summer 2022).'),
-        th("Number Of Sites Sampled", title = 'Number of sites sampled as part of this program, this should be a number or an entry indicating no data or na.'),
+        th("Number Of Sites Sampled", title = 'Number of sites sampled as part of this program.'),
         th("Data Link", title = 'Web link to download data.'),
         th("Data Type", title = 'Format of data available for download from the program’s website.'),
         th("Program Website", title = 'Web link to the program’s website.')
+        
+       
       )
     )
   ))        
