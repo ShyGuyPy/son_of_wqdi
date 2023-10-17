@@ -27,6 +27,7 @@ dt_table <- function(input, output, session, data.df) {
     thead(
       tr(
         th('', title = 'Row Names'),
+        th("EPA Group Name", title='EPA WQX Characteristic Domain Values.'),
         th("Parameter Group", title = 'Related groups of metric parameters.'),
         th("Metric Parameter", title = 'Name of parameter being sampled for by the program.'),
         th("State", title = 'State(s) where data collection occurs.'),

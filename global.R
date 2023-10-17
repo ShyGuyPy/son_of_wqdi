@@ -67,10 +67,11 @@ program.cols <- c("organization", "program_name", "site_location",
                   "public_or_restricted_data", "dataset_fees",
                   "data_type", "program_website", "data_link",
                   "contact_name", "contact_phone", "contact_email",
-                  "state","county","watershed_information")
+                  "state","county","watershed_information","epa_group_name")
 program.df <- inventory.df[, names(inventory.df) %in% program.cols] %>%
   ####reordering table output
-  select("parameter_group",
+  select("epa_group_name",
+         "parameter_group",
          "metric_parameter",
          "state",
          "county",
